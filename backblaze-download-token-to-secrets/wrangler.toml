@@ -1,0 +1,13 @@
+name = "backblaze-download-token-to-secrets"
+main = "out/bundle.js"
+compatibility_date = "2022-07-11"
+
+# Add polyfills for node builtin modules and globals
+node_compat = false
+
+[triggers]
+crons = [ "1 * * * *" ]
+
+[vars]
+B2_APPLICATION_KEY_ID = "foo"
+B2_APPLICATION_KEY = "bar"

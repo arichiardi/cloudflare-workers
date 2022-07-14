@@ -1,0 +1,15 @@
+{:skip-comments true
+ :linters {:unresolved-symbol
+           {:exclude [thrown-with-data? (com.rpl.specter/recursive-path) (com.rpl.specter/richnav)
+                      (com.rpl.specter/transform*) (com.rpl.specter/select*)
+                      (io.pedestal.interceptor.error/error-dispatch) (me.raynes.conch/let-programs)
+                      (me.raynes.conch/with-programs) (me.raynes.conch/programs)
+                      (clojure.test.check.properties/for-all)]}
+           :unresolved-var {:exclude [camel-snake-kebab.core]}
+           :unused-namespace {:level :error}
+           :unused-import {:level :error}
+           :unused-referred-var {:level :error}
+           :unsorted-required-namespaces {:level :off}
+           :missing-docstring {:level :off}}
+ :lint-as {shadow.cljs.modern/js-await clojure.core/let
+           clojure.test.check.clojure-test/defspec clojure.core/def}}

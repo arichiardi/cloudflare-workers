@@ -1,0 +1,10 @@
+{:main cloudflare.workers
+ :output-to "out/cloudflare-workers.js"
+ ;; :output-dir "out"
+ :target :bundle
+ :source-map false
+ :hashbang false
+ :fn-invoke-direct true
+ :infer-externs true
+ :warnings-as-errors true
+ :language-out :ecmascript-next}

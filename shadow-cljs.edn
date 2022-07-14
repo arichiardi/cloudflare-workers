@@ -1,0 +1,22 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ []
+
+ :builds
+ {:workers {:target :esm
+            :output-to "out/cloudflare-workers.js"
+            :output-dir "out"
+            :modules {:cloudflare-workers
+                      ;; thheller: thats the build config. I guess the :preloads is needed because
+                      ;;           of a bug (which would be the module_loaded being emitted when it
+                      ;;           shouldn't be, due to :enabled false)
+                      {:preloads [shadow.cljs.devtools.client.env]
+                       :exports {default cloudflare.workers/exports}}}
+            :runtime :node
+            :compiler-options {:output-feature-set :es-next}
+            :js-options {:entry-keys ["main" "module"]}
+            :devtools {:repl-pprint true}
+            :release {:compiler-options {:source-map true}}}}}

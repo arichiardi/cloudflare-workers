@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-workers",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "watch": "shadow-cljs watch workers",
+    "repl": "shadow-cljs node-repl",
+    "watch2": "clojure -M:cljs -m cljs.main -co build.edn --watch src -O none --compile"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.19"
+  }
+}

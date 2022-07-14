@@ -1,0 +1,15 @@
+{
+  "name": "backblaze-download-token-to-secrets",
+  "version": "0.0.1",
+  "author": "Andrea Richiardi",
+  "license": "Unlicense",
+  "main": "main.js",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "watch": "esbuild main.js --watch --bundle --platform=neutral --keep-names --format=esm --define:process.env.NODE_ENV=\"dev\" --define:window=global --outfile=./out/bundle.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14",
+    "wrangler": "^2.0"
+  }
+}
